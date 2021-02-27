@@ -12,7 +12,7 @@ let tempSign = document.querySelector('.tempSign')
             let long = position.coords.longitude;
             let lat = position.coords.latitude;
 
-            let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2f018cbd9ad2c9d1b9024132bad14125`;
+            let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2f018cbd9ad2c9d1b9024132bad14125`;
 
             fetch(api)
               .then(res => {
