@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:black;
+    align-items: center;
+    background: linear-gradient(rgb(52, 170, 87), rgb(19, 153, 60));
+    height:100vh
+}
+
+.location, .temperatureDesc{
+    display:flex;
+    align-items: center;
+    height:30vh;
+    justify-content: space-around;
+    width:50%;
+
+}
+
+.temperature{
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+}
+
+.temperature h1{
+    font-size:60px;
+}
+
+.temperature span{
+    font-size: 40px;
+    margin:10px
+}
+
+.temperatureDesc{
+    flex-direction: column;
+}
+
+.icon{
+    height:50%;
+}
+
+.locationTimezone{
+    font-size:60px;
+}
+
+.temperature:hover{
+    color:white;
+}
