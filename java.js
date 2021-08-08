@@ -8,6 +8,8 @@ let retryButton = document.getElementById('activateButton')
 
 retryButton.addEventListener('click', getTemperature)
 
+document.addEventListener("DOMContentLoaded", getTemperature)
+
 function changeButtonStyle(){
     weatherIcon.remove()
     retryButton.style.backgroundColor='transparent'
