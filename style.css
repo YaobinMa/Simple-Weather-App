@@ -54,3 +54,15 @@ body{
 .temperature:hover{
     color:white;
 }
+
+#activateButton{
+    font-size:30px;
+    color:blue;
+    border-radius: 100px;
+    padding:20px;
+    cursor:pointer;
+}
+
+#activateButton:hover{
+    background-color: yellow;
+}

@@ -3,6 +3,21 @@ let desc = document.querySelector('.desc');
 let locationTimezone = document.querySelector('.locationTimezone');
 const temperatureButton = document.querySelector('.temperature');
 let tempSign = document.querySelector('.tempSign')
+let weatherIcon = document.getElementById('weatherIcon')
+let retryButton = document.getElementById('activateButton')
+
+retryButton.addEventListener('click', getTemperature)
+
+function changeButtonStyle(){
+    weatherIcon.remove()
+    retryButton.style.backgroundColor='transparent'
+    retryButton.style.border='none'
+    retryButton.style.color='black'
+    retryButton.style.cursor='default'
+}
+
+function getTemperature(){
+    changeButtonStyle();
 
     if(!navigator.geolocation){
         alert('please enable location access')
@@ -12,7 +27,7 @@ let tempSign = document.querySelector('.tempSign')
             let long = position.coords.longitude;
             let lat = position.coords.latitude;
 
-            let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2f018cbd9ad2c9d1b9024132bad14125`;
+            let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=2f018cbd9ad2c9d1b9024132bad14125`;
 
             fetch(api)
               .then(res => {
@@ -126,5 +141,5 @@ let tempSign = document.querySelector('.tempSign')
         });
 
     }
-
+}
 
